@@ -1,5 +1,5 @@
 %define version 5.4.2
-%define release 1mdk
+%define release %mkrel 1
 
 %define libname %mklibname %{name}
 
