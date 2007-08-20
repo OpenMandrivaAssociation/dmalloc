@@ -15,6 +15,8 @@ Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}-%{release}
 Provides:	dmalloc-devel = %{version}-%{release}
 Provides:	libdmalloc-devel = %{version}-%{release}
+Requires(post):  info-install
+Requires(preun):  info-install
 Obsoletes:	dmalloc-devel libdmalloc-devel
 
 %package -n %{libname}
