@@ -1,5 +1,5 @@
 %define version 5.4.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define libname %mklibname -d %{name}
 
@@ -20,8 +20,8 @@ Requires(preun):  info-install
 Summary:	Debugging MALLOC library
 Group:		Development/Other
 Provides:	dmalloc-devel = %{version}-%{release}
-Provides:	libdmalloc-devel = %{version}-%{release}
-Obsoletes:	dmalloc-devel libdmalloc-devel
+Provides:	libdmalloc-devel = %{version}-%{release} %mklibname %name
+Obsoletes:	dmalloc-devel libdmalloc-devel %mklibname %name
 
 %description
 The debug memory allocation or "dmalloc" library has been designed
