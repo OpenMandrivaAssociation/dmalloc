@@ -12,16 +12,16 @@ URL:		http://dmalloc.com/
 Group:		Development/Other
 Source:		%{name}-%{version}.tar.bz2
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{version}
 Requires(post):  info-install
 Requires(preun):  info-install
-Obsoletes:	dmalloc-devel libdmalloc-devel
 
 %package -n %{libname}
 Summary:	Debugging MALLOC library
 Group:		Development/Other
 Provides:	dmalloc-devel = %{version}-%{release}
 Provides:	libdmalloc-devel = %{version}-%{release}
+Obsoletes:	dmalloc-devel libdmalloc-devel
 
 %description
 The debug memory allocation or "dmalloc" library has been designed
