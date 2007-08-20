@@ -1,4 +1,4 @@
-%define version 5.4.2
+%define version 5.4.3
 %define release %mkrel 1
 
 %define libname %mklibname -d %{name}
