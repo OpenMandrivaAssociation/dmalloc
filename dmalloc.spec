@@ -1,7 +1,7 @@
 %define version 5.4.2
 %define release %mkrel 1
 
-%define libname %mklibname %{name}
+%define libname %mklibname -d %{name}
 
 Name:		dmalloc
 Version:	%{version}
@@ -13,8 +13,6 @@ Group:		Development/Other
 Source:		%{name}-%{version}.tar.bz2
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}-%{release}
-Provides:	dmalloc-devel = %{version}-%{release}
-Provides:	libdmalloc-devel = %{version}-%{release}
 Requires(post):  info-install
 Requires(preun):  info-install
 Obsoletes:	dmalloc-devel libdmalloc-devel
@@ -22,6 +20,8 @@ Obsoletes:	dmalloc-devel libdmalloc-devel
 %package -n %{libname}
 Summary:	Debugging MALLOC library
 Group:		Development/Other
+Provides:	dmalloc-devel = %{version}-%{release}
+Provides:	libdmalloc-devel = %{version}-%{release}
 
 %description
 The debug memory allocation or "dmalloc" library has been designed
@@ -75,8 +75,8 @@ rm -rf %{buildroot}
 %doc ChangeLog.1 INSTALL NEWS README RELEASE.html docs/NOTES docs/TODO docs/*.html
 %{_bindir}/*
 %{_infodir}/*
-%{_includedir}/*
 
-%files -n %{libname}
+%files -n %libname
 %defattr (-,root,root)
+%{_includedir}/*
 %{_libdir}/*.a
