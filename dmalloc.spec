@@ -10,7 +10,7 @@ Summary:	Debugging MALLOC
 License:	BSD style
 URL:		http://dmalloc.com/
 Group:		Development/Other
-Source:		http://dmalloc.com/releases/%{name}-%{version}.tar.gz
+Source:		http://dmalloc.com/releases/%{name}-%{version}.tgz
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}
 Requires(post):  info-install
