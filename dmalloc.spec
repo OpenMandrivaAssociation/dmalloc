@@ -1,5 +1,5 @@
-%define version 5.4.3
-%define release %mkrel 2
+%define version 5.5.2
+%define release %mkrel 1
 
 %define libname %mklibname -d %{name}
 
@@ -10,7 +10,7 @@ Summary:	Debugging MALLOC
 License:	BSD style
 URL:		http://dmalloc.com/
 Group:		Development/Other
-Source:		%{name}-%{version}.tar.bz2
+Source:		http://dmalloc.com/releases/%{name}-%{version}.tar.gz
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}
 Requires(post):  info-install
