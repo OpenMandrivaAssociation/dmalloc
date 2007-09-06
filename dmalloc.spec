@@ -54,12 +54,11 @@ export CFLAGS=`echo %optflags | sed 's/-O2/-O0/'`
 %configure2_5x --enable-threads
 
 # test this puppy
-make heavy
+%make heavy
 
 %install
 rm -rf %{buildroot}
-%makeinstall installinfo 
-#INFOFILE=docs/%{name}.info
+%makeinstall
 
 %post
 %_install_info %{name}.info
