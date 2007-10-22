@@ -13,8 +13,6 @@ Group:		Development/Other
 Source:		http://dmalloc.com/releases/%{name}-%{version}.tgz
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}
-Requires(post):  info-install
-Requires(preun):  info-install
 
 %package -n %{libname}
 Summary:	Debugging MALLOC library
@@ -60,12 +58,6 @@ make heavy
 rm -rf %{buildroot}
 %makeinstall
 
-%post
-%_install_info %{name}.info
-
-%preun
-%_remove_install_info %{name}.info
-
 %clean
 rm -rf %{buildroot}
 
@@ -73,7 +65,6 @@ rm -rf %{buildroot}
 %defattr (-,root,root)
 %doc ChangeLog.1 INSTALL NEWS README RELEASE.html docs/NOTES docs/TODO docs/*.html
 %{_bindir}/*
-%{_infodir}/*
 
 %files -n %libname
 %defattr (-,root,root)
