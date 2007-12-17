@@ -11,7 +11,6 @@ License:	BSD style
 URL:		http://dmalloc.com/
 Group:		Development/Other
 Source:		http://dmalloc.com/releases/%{name}-%{version}.tgz
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	%{libname} = %{version}
 
 %package -n %{libname}
