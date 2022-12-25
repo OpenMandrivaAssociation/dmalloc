@@ -5,7 +5,7 @@
 
 Name:		dmalloc
 Version:	%{version}
-Release:	%{release}
+Release:	%{release}1
 Summary:	Debugging MALLOC
 License:	BSD style
 URL:		http://dmalloc.com/
