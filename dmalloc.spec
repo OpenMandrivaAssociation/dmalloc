@@ -51,10 +51,9 @@ export CFLAGS=`echo %optflags | sed 's/-O2/-O0/'`
 make heavy
 
 %install
-%makeinstall
+%make_install
 
 %files
-%doc ChangeLog.1 INSTALL NEWS README RELEASE.html docs/NOTES docs/TODO docs/*.html
 %{_bindir}/*
 
 %files -n %libname
