@@ -1,11 +1,8 @@
-%define version 5.5.2
-%define release 8
-
 %define libname %mklibname -d %{name}
 
 Name:		dmalloc
-Version:	%{version}
-Release:	%{release}1
+Version:	5.6.5
+Release:	1
 Summary:	Debugging MALLOC
 License:	BSD style
 URL:		http://dmalloc.com/
