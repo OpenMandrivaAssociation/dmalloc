@@ -51,8 +51,9 @@ export CFLAGS=`echo %optflags | sed 's/-O2/-O0/'`
 make heavy
 
 %install
-%make_install
-
+%make_install	bindir=%{buildroot}%{_bindir} \
+				libdir=%{buildroot}%{_libdir} \
+				includedir=%{buildroot}%{_includedir}
 %files
 %{_bindir}/*
 
