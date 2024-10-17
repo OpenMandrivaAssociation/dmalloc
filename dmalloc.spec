@@ -5,7 +5,7 @@ Version:	5.6.5
 Release:	1
 Summary:	Debugging MALLOC
 License:	BSD style
-URL:		http://dmalloc.com/
+URL:		https://dmalloc.com/
 Group:		Development/Other
 Source0:	http://dmalloc.com/releases/%{name}-%{version}.tgz
 Requires:	%{libname} = %{version}
