@@ -17,6 +17,11 @@ Provides:	dmalloc-devel = %{version}-%{release}
 Provides:	libdmalloc-devel = %{version}-%{release} %mklibname %name
 Obsoletes:	dmalloc-devel libdmalloc-devel %mklibname %name
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 The debug memory allocation or "dmalloc" library has been designed
 as a drop in replacement for the system's `malloc', `realloc',
